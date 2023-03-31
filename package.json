@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.21",
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "axios": "^1.3.4",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "mysql": "^2.18.1",
+    "next": "^13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
     "typescript": "5.0.2"
   }
 }
