@@ -14,6 +14,10 @@ const links = [
     {
         name: 'page-two',
         label: 'Page 2'
+    },
+    {
+        name: 'page-three',
+        label: 'Page 3'
     }
 ];
 export default function App({ Component, pageProps }: AppProps) {

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 
 type FormData = {
-    [k: string]: {name: string, id: number} | undefined
+    [k: string]: {name: string, id: number, uniqueid?: number} | undefined
 }
 type Result = {
     [k: string]: number
@@ -41,7 +41,7 @@ const Index = () => {
             table: 'ward',
             data: { lga_id: formData.lga?.id }
         })).data.rows.map((row: any) => {
-            return {name: row.ward_name, id: row.ward_id}
+            return {name: row.ward_name, id: row.ward_id, uniqueid: row.uniqueid}
         })
     }, { enabled: !!formData.lga && !loading })
     const {
@@ -140,7 +140,8 @@ const Index = () => {
         setFindQuery(event.target.value)
     }
     return (
-        <div style={{display: 'flex', flexDirection: 'column', gap: 10, padding: 10, alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: 10, alignItems: 'center', justifyContent: 'center' }}>
+            <h3>Get Polling Unit Result</h3>
             <form style={{ display: 'flex', gap: '10px' }} onSubmit={handleFindPollingUnitSubmit}>
                 <label>Find Polling unit<br/>
                     <select value={searchType} onChange={handleSearchTypeChange}>

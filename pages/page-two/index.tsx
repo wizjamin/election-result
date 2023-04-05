@@ -66,7 +66,7 @@ const Index = () => {
 
     return (
         <div style={{display: 'flex', flexDirection: 'column', gap: 10, padding: 10, alignItems: 'center', justifyContent: 'center'}}>
-            
+            <h3>Sum Polling Unit Result For each LGA</h3>
             <form style={{display: 'flex', gap: '10px', flexDirection: 'column'}} onSubmit={handleSubmit}>
                 <div style={{ display: 'flex', gap: '10px' }}>
 
